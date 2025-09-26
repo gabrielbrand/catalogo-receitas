@@ -1,6 +1,7 @@
 <template>
   <header>
     <h1>
+      <img src="../../../public/logo.png" alt="Logo" width="100" height="100"/>
       <router-link :to="{ name: 'home' }">Home</router-link>
     </h1>
     <h3>
@@ -26,6 +27,7 @@ export default {
 header {
     display: flex;
     flex-direction: row;
+    width: 100%;
     align-items: center;
     justify-content: space-evenly;
     background: #e0e7ff;
