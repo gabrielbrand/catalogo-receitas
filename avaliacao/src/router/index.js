@@ -4,6 +4,7 @@ import Sobre from '@/pages/sobre.vue'
 import CatalogoReceitas from '@/pages/catalogo_receitas.vue'
 import Receita from '@/pages/receita.vue'
 import Login from '@/pages/login.vue'
+import Cadastrar from '@/pages/cadastrar.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/cadastrar',
+      name: 'cadastrar',
+      component: Cadastrar
     }
   ],
 })
