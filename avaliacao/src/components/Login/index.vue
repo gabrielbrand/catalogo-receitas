@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <img class="logo" src="../../../public/logo.png" alt="Logo" width="200" height="200"/>
+        <img class="logo" src="../../../public/2.png" alt="Logo"/>
         <br />
         <h1>Login</h1>
         <input class="usuario" type="text" placeholder="Usuário" /><br /><br />
@@ -28,12 +28,14 @@
     height: 50%;
     margin: 100px auto;
     border-radius: 12px;
-    background: white;
+    background: #0B174C;
 }
 
 .logo {
-    margin-top: 20px;
+    width: 250px;
+    height: 250px;
 }
+
 
 .usuario, .senha {
     width: 50%;
@@ -44,9 +46,9 @@
 }
 
 .btn1 {
-    background-color: black;
+    background-color: white;
     border: none;
-    color: white;
+    color: #0B174C;
     width: 50%;
     height: 10%;
     margin: 20px 0;
@@ -56,8 +58,8 @@
     border-radius: 6px;
 }
 .login h1 {
-    margin-bottom: 40px;
     margin: 0;
+    color: white;
 }
 
 p {
