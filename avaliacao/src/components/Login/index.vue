@@ -7,10 +7,10 @@
 
     <h1>Login</h1>
 
-    <input class="usuario" type="text" placeholder="Usuário" />
+    <input class="email" type="text" placeholder="E-mail" />
     <input class="senha" type="password" placeholder="Senha" />
 
-    <router-link class="link" to="/cadastrar">Clique aqui para cadastrar</router-link>
+    <router-link class="link" to="/cadastrar">Não tem uma conta? Cadastre-se</router-link>
 
     <button class="entrar">Entrar</button>
   </div>
@@ -49,7 +49,7 @@
   margin-top: -25%;
 }
 
-.usuario, .senha {
+.email, .senha{
   width: 85%;
   border-radius: 5px;
   border: 1px solid #ccc;
