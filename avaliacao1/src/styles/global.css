@@ -1,0 +1,14 @@
+/* Global styles */
+html, body {
+  background-color: #ffffff !important;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  background-color: #ffffff !important;
+}
+
+.v-application {
+  background-color: #ffffff !important;
+}
