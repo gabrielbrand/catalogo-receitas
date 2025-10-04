@@ -13,7 +13,11 @@
       <router-link id="sobre" :to="{ name: 'sobre' }">Sobre</router-link>
     </h3>
     <h3>
-      <router-link id="login" :to="{ name: 'login' }">Login</router-link>
+      <span v-if="appStore.isLogged">{{ appStore.getUser.name }} 
+        <v-btn @click="appStore.logout()">Sair</v-btn>
+      </span>
+      
+      <router-link v-else id="login" :to="{ name: 'login' }">Login</router-link>
     </h3>
   </header>
 
@@ -24,6 +28,15 @@ export default {
   name: 'header'
 }
 </script>
+
+<script setup>
+import { ref } from 'vue';
+import { useAppStore } from '@/stores/app.js';
+
+const appStore = useAppStore();
+
+</script>
+
 
 <style scoped>
 header {

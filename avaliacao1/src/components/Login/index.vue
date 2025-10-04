@@ -1,21 +1,39 @@
 <template>
   <div class="login">
+    <v-card v-if="!appStore.isLogged">
     <div class="logo-container">
       <img class="gorecipe" src="../../../public/2.png" alt="Logo"/>
     </div>
 
     <h1>Login</h1>
-    <div class="input-container">
+    <v-card class="input-container">
       <p>E-mail</p>
-      <input class="email" type="text" placeholder="Digite seu e-mail" />
+      <v-text-field v-model="email" class="email" type="text" placeholder="Digite seu e-mail" />
       <p>Senha</p>
-      <input class="senha" type="password" placeholder="Digite sua senha" />
-    </div>
-    <router-link class="link" to="/cadastrar">Não tem uma conta? Cadastre-se</router-link>
+      <v-text-field class="senha" type="password" placeholder="Digite sua senha" />
+    </v-card>
+    <v-btn class="link" to="/cadastrar">Não tem uma conta? Cadastre-se</v-btn>
 
-    <button class="entrar">Entrar</button>
+    <v-btn @click="appStore.login(email, password)" class="entrar">Entrar</v-btn>
+    </v-card>
+    <v-card v-else>
+      <v-card-title>Bem-vindo de volta, {{ appStore.getUser.name }}</v-card-title>
+      <v-card-subtitle>{{ appStore.getUser.email }}</v-card-subtitle>
+      <v-card-actions>
+        <v-btn block color="red" size="large" variant="tonal" @click="appStore.logout()">Sair</v-btn>
+      </v-card-actions>
+    </v-card>
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+import { useAppStore } from '@/stores/app.js';
+
+const appStore = useAppStore();
+const email = ref('');
+const password = ref('');
+</script>
 
 <style scoped>
 .login {
