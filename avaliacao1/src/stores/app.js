@@ -30,10 +30,6 @@ export const useAppStore = defineStore('app', {
         
         this.registeredUsers.push(newUser);
         
-        this.user.name = newUser.name;
-        this.user.email = newUser.email;
-        this.isLogged = true;
-        
         return { success: true, user: newUser };
       } catch (error) {
         return { success: false, error: error.message };

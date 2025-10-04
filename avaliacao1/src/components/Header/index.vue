@@ -13,8 +13,11 @@
       <router-link id="sobre" :to="{ name: 'sobre' }">Sobre</router-link>
     </h3>
     <h3>
-      <span v-if="appStore.isLogged">{{ appStore.getUser.name }} 
-        <v-btn @click="appStore.logout()">Sair</v-btn>
+      <span class="sair" v-if="appStore.isLogged">{{ appStore.getUser.name }}
+        <span class="sair-btn">
+          <DoorOpen />
+          <span @click="appStore.logout()">Sair</span>
+        </span>
       </span>
       
       <router-link v-else id="login" :to="{ name: 'login' }">Login</router-link>
@@ -32,6 +35,7 @@ export default {
 <script setup>
 import { ref } from 'vue';
 import { useAppStore } from '@/stores/app.js';
+import { DoorOpen } from 'lucide-vue-next';
 
 const appStore = useAppStore();
 
@@ -68,5 +72,22 @@ header #home .gorecipe {
   margin-top: 10px;
 }
 
+header .sair {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #0B174C;
+  gap: 20px;
+}
+
+header .sair-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: red;
+  cursor: pointer;
+  gap: 5px;
+
+}
 
 </style>
