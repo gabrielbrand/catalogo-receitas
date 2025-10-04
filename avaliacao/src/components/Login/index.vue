@@ -1,78 +1,90 @@
 <template>
-    <div class="login">
-        <img class="logo" src="../../../public/2.png" alt="Logo"/>
-        <br />
-        <h1>Login</h1>
-        <input class="usuario" type="text" placeholder="Usuário" /><br /><br />
-        <input class="senha" type="password" placeholder="Senha" /><br /><br />
-
-
-        <router-link to="/cadastrar">Clique aqui para cadastrar</router-link>
-
-        <button class="btn1">Entrar</button>
-
+  <div class="login">
+    <div class="logo-container">
+      <img class="logo" src="../../../public/1.png" alt="Logo"/>
+      <img class="gorecipe" src="../../../public/2.png" alt="Logo"/>
     </div>
+
+    <h1>Login</h1>
+
+    <input class="usuario" type="text" placeholder="Usuário" />
+    <input class="senha" type="password" placeholder="Senha" />
+
+    <router-link class="link" to="/cadastrar">Clique aqui para cadastrar</router-link>
+
+    <button class="entrar">Entrar</button>
+  </div>
 </template>
 
-<script setup></script>
-
 <style scoped>
-
 .login {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 30%;
-    height: 50%;
-    margin: 100px auto;
-    border-radius: 12px;
-    background: #0B174C;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+  margin: 80px auto;
+  border-radius: 12px;
+  background: #F1F3F6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  gap: 10px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
 }
 
 .logo {
-    width: 250px;
-    height: 250px;
+  width: 50%;
+  height: 50%;
 }
 
+.gorecipe {
+  width: 50%;
+  height: 50%;
+  margin-top: -25%;
+}
 
 .usuario, .senha {
-    width: 50%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-size: 16px;
+  width: 85%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  padding: 8px;
 }
 
-.btn1 {
-    background-color: white;
-    border: none;
-    color: #0B174C;
-    width: 50%;
-    height: 10%;
-    margin: 20px 0;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 6px;
+.entrar {
+  background-color: #0B174C;
+  border: 1px solid #0B174C;
+  color: white;
+  padding: 10px;
+  padding-inline: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  
 }
+
+.entrar:hover {
+  background-color: #142f5b;
+  font-size: 15px;
+}
+
 .login h1 {
-    margin: 0;
-    color: white;
+  margin: 5px 0;
+  color: #0B174C;
+  margin-top: -20%
 }
 
-p {
-    margin: 0;
-    padding: 0;
-}
-
-</style>
-
-<style>
-body {
-  background: #F1F3F6;
-  font-family: 'Inter', sans-serif;
-  margin: 0;        
+.link {
+  font-size: 16px;
+  color: #0B174C;
+  text-decoration: none;
+  margin-top: 4px;
 }
 </style>

@@ -30,7 +30,7 @@ header {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100px;
+    height: 70px;
     align-items: center;
     justify-content: space-evenly;
     background-color: #f8f9fa;
@@ -50,9 +50,10 @@ header #home {
   align-items: center;
 }
 
-
 header #home .gorecipe {
+  margin-left: -20px;
   margin-top: 10px;
 }
+
 
 </style>
