@@ -6,15 +6,21 @@
     </div>
 
     <h1>Login</h1>
+    
+    <!-- Mensagem de erro -->
+    <div v-if="appStore.getError" class="error-message">
+      {{ appStore.getError }}
+    </div>
+    
     <v-card class="input-container">
       <p>E-mail</p>
       <v-text-field v-model="email" class="email" type="text" placeholder="Digite seu e-mail" />
       <p>Senha</p>
-      <v-text-field class="senha" type="password" placeholder="Digite sua senha" />
+      <v-text-field v-model="password" class="senha" type="password" placeholder="Digite sua senha" />
     </v-card>
     <v-btn class="link" to="/cadastrar">Não tem uma conta? Cadastre-se</v-btn>
 
-    <v-btn @click="appStore.login(email, password)" class="entrar">Entrar</v-btn>
+    <v-btn @click="handleLogin" class="entrar">Entrar</v-btn>
     </v-card>
     <v-card v-else>
       <v-card-title>Bem-vindo de volta, {{ appStore.getUser.name }}</v-card-title>
@@ -33,6 +39,15 @@ import { useAppStore } from '@/stores/app.js';
 const appStore = useAppStore();
 const email = ref('');
 const password = ref('');
+
+const handleLogin = () => {
+  appStore.clearError();
+  const result = appStore.login(email.value, password.value);
+  
+  if (!result.success) {
+    console.error('Erro no login:', appStore.getError);
+  }
+};
 </script>
 
 <style scoped>
@@ -114,5 +129,16 @@ const password = ref('');
   text-decoration: none;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: 1px solid #ffcdd2;
+  width: 85%;
+  text-align: center;
 }
 </style>
