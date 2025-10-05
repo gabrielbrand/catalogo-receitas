@@ -37,12 +37,15 @@
     </div>
     <router-link class="link" to="/login">Já tem uma conta? Fazer login</router-link>
 
+    <div v-if="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+
     <button 
       class="entrar" 
       @click="handleRegister"
-      :disabled="appStore.getIsLoading"
     >
-      {{ appStore.getIsLoading ? 'Cadastrando...' : 'Cadastrar' }}
+      Cadastrar
     </button>
   </div>
 </template>
@@ -65,13 +68,10 @@ const formData = ref({
 
 const successMessage = ref('')
 
-// Função para lidar com o registro
 const handleRegister = async () => {
-  // Limpar mensagens anteriores
   appStore.clearError()
   successMessage.value = ''
   
-  // Validações básicas
   if (!formData.value.name || !formData.value.email || !formData.value.password) {
     appStore.error = 'Todos os campos são obrigatórios'
     return
@@ -81,8 +81,7 @@ const handleRegister = async () => {
     appStore.error = 'As senhas não coincidem'
     return
   }
-  
-  // Chamar a função de registro do store
+
   const result = await appStore.registerUser({
     name: formData.value.name,
     email: formData.value.email,
@@ -90,13 +89,13 @@ const handleRegister = async () => {
   })
   
   if (result.success) {
-    successMessage.value = 'Conta criada com sucesso!'
-    // Redirecionar para a página inicial após 2 segundos
+    successMessage.value = 'Cadastro realizado com sucesso!'
     setTimeout(() => {
       router.push('/login')
     }, 2000)
   }
 }
+
 </script>
 
 <style scoped>
