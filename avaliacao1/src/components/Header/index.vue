@@ -14,7 +14,7 @@
     </h3>
     <h3>
       <span v-if="appStore.isLogged">{{ appStore.getUser.name }} 
-        <v-btn @click="appStore.logout()">Sair</v-btn>
+        <v-btn class="sair-btn" @click="appStore.logout()">Sair</v-btn>
       </span>
       
       <router-link v-else id="login" :to="{ name: 'login' }">Login</router-link>
@@ -64,6 +64,13 @@ header #home {
 header #home .gorecipe {
   margin-left: -20px;
   margin-top: 10px;
+}
+
+.sair-btn {
+  color: red;
+  font-weight: bold;
+  border: 1px solid red;
+  margin-left: 10px;
 }
 
 

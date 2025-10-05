@@ -81,7 +81,7 @@
               <v-card-actions class="pa-4">
                 <v-spacer></v-spacer>
                 <v-btn
-                  color="#ef4545"
+                  color="#0b174c"
                   variant="flat"
                   :to="{ name: 'receita', params: { id: receita.id } }"
                   class="recipe-btn px-4"

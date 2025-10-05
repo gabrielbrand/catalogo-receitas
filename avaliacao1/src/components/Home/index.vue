@@ -174,7 +174,7 @@ export default {
 }
 
 .cta-section {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  background: linear-gradient(135deg, #ef4545 0%, #e47b1a 100%);
   position: relative;
 }
 

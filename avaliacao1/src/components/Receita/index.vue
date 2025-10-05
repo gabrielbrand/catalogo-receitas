@@ -145,7 +145,7 @@
 
           <v-row v-if="receita.dicas" class="mt-8">
             <v-col cols="12">
-              <v-card class="tips-card pa-6" elevation="2" color="orange-lighten-5">
+              <v-card class="tips-card pa-6" elevation="2" color="white">
                 <h3 class="text-h5 font-weight-bold mb-4 d-flex align-center text-orange-darken-2">
                   <v-icon class="mr-2" color="orange">mdi-lightbulb</v-icon>
                   Dicas do Chef
@@ -324,9 +324,6 @@
   flex: 1;
 }
 
-.tips-card {
-  border-left: 4px solid #ff9800;
-}
 
 @media (max-width: 960px) {
   .recipe-title {

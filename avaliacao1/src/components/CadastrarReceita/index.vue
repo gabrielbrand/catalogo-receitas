@@ -25,81 +25,76 @@
               <v-form ref="form" v-model="valid" @submit.prevent="submitForm">
                 <v-row>
                   <v-col cols="12" class="mb-4">
+                    <p class="mb-2 align-center">Nome da Receita</p>
                     <v-text-field
                       v-model="formData.titulo"
-                      label="Nome da Receita"
                       placeholder="Ex: Bolo de Chocolate"
                       :rules="[rules.required]"
                       variant="outlined"
-                      prepend-inner-icon="mdi-food"
                       required
                     ></v-text-field>
                   </v-col>
 
                   <v-col cols="12" class="mb-4">
+                    <p class="mb-2 align-center">Descrição da Receita</p>
                     <v-textarea
                       v-model="formData.descricao"
-                      label="Descrição da Receita"
                       placeholder="Descreva brevemente sua receita..."
                       :rules="[rules.required]"
                       variant="outlined"
                       rows="3"
-                      prepend-inner-icon="mdi-text"
                       required
                     ></v-textarea>
                   </v-col>
 
                   <v-col cols="12" class="mb-4">
+                    <p class="mb-2 align-center">URL da Imagem</p>
                     <v-text-field
                       v-model="formData.imagem"
-                      label="URL da Imagem"
                       placeholder="https://exemplo.com/imagem.jpg"
                       :rules="[rules.required, rules.url]"
                       variant="outlined"
-                      prepend-inner-icon="mdi-image"
                       required
                     ></v-text-field>
                   </v-col>
 
                   <v-col cols="12" md="4" class="mb-4">
+                    <p class="mb-2 align-center">Dificuldade</p>
                     <v-select
                       v-model="formData.dificuldade"
-                      label="Dificuldade"
+                      placeholder="Selecione a dificuldade"
                       :items="dificuldadeOptions"
                       :rules="[rules.required]"
                       variant="outlined"
-                      prepend-inner-icon="mdi-flag"
                       required
                     ></v-select>
                   </v-col>
 
                   <v-col cols="12" md="4" class="mb-4">
+                    <p class="mb-2 align-center">Tempo de Preparo</p>
                     <v-text-field
                       v-model="formData.tempo"
-                      label="Tempo de Preparo"
                       placeholder="Ex: 45 min"
                       :rules="[rules.required]"
                       variant="outlined"
-                      prepend-inner-icon="mdi-clock-outline"
                       required
                     ></v-text-field>
                   </v-col>
 
                   <v-col cols="12" md="4" class="mb-4">
+                    <p class="mb-2 align-center">Porções</p>
                     <v-text-field
                       v-model="formData.porcoes"
-                      label="Porções"
                       placeholder="Ex: 4 pessoas"
                       :rules="[rules.required]"
                       variant="outlined"
-                      prepend-inner-icon="mdi-account-group"
                       required
                     ></v-text-field>
                   </v-col>
 
                   <v-col cols="12" class="mb-4">
                     <h3 class="text-h6 font-weight-bold mb-4 d-flex align-center">
-                      <v-icon class="mr-2" color="primary">mdi-format-list-bulleted</v-icon>
+                      <v-icon class="mr-2" color="#ee5a24 ">mdi-format-list-bulleted</v-icon>
                       Ingredientes
                     </h3>
                     <div v-for="(ingrediente, index) in formData.ingredientes" :key="index" class="d-flex align-center mb-2">
@@ -121,7 +116,7 @@
                       ></v-btn>
                     </div>
                     <v-btn
-                      color="primary"
+                      color="#0b174c"
                       variant="outlined"
                       prepend-icon="mdi-plus"
                       @click="addIngredient"
@@ -133,12 +128,12 @@
 
                   <v-col cols="12" class="mb-4">
                     <h3 class="text-h6 font-weight-bold mb-4 d-flex align-center">
-                      <v-icon class="mr-2" color="primary">mdi-book-open-variant</v-icon>
+                      <v-icon class="mr-2" color="#ee5a24 ">mdi-book-open-variant</v-icon>
                       Modo de Preparo
                     </h3>
                     <div v-for="(instrucao, index) in formData.instrucoes" :key="index" class="mb-4">
                       <div class="d-flex align-start">
-                        <v-avatar color="primary" size="32" class="mr-4 mt-1">
+                        <v-avatar color="#0b174c" size="32" class="mr-4 mt-1">
                           <span class="text-white font-weight-bold">{{ index + 1 }}</span>
                         </v-avatar>
                         <v-textarea
@@ -161,7 +156,7 @@
                       </div>
                     </div>
                     <v-btn
-                      color="primary"
+                      color="#0b174c"
                       variant="outlined"
                       prepend-icon="mdi-plus"
                       @click="addInstruction"
@@ -172,13 +167,12 @@
                   </v-col>
 
                   <v-col cols="12" class="mb-6">
+                    <p class="mb-2 align-center">Dicas do Chef (Opcional)</p>
                     <v-textarea
                       v-model="formData.dicas"
-                      label="Dicas do Chef (Opcional)"
                       placeholder="Compartilhe dicas especiais para esta receita..."
                       variant="outlined"
                       rows="2"
-                      prepend-inner-icon="mdi-lightbulb"
                     ></v-textarea>
                   </v-col>
 
@@ -193,7 +187,7 @@
                       Cancelar
                     </v-btn>
                     <v-btn
-                      color="primary"
+                      color="#0b174c"
                       variant="flat"
                       size="large"
                       type="submit"
@@ -236,7 +230,7 @@ export default {
         titulo: '',
         descricao: '',
         imagem: '',
-        dificuldade: '',
+            dificuldade: null,
         tempo: '',
         porcoes: '',
         ingredientes: [''],
