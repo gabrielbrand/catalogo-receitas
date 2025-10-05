@@ -1,0 +1,92 @@
+<template>
+  <div class="login">
+    <div class="logo-container">
+      <img class="logo" src="../../../public/1.png" alt="Logo"/>
+      <img class="gorecipe" src="../../../public/2.png" alt="Logo"/>
+    </div>
+
+    <h1>Cadastrar</h1>
+
+    <input class="email" type="text" placeholder="E-mail" />
+    <input class="senha" type="password" placeholder="Senha" />
+    <input class="re-senha" type="password" placeholder="Repetir Senha" />
+
+
+    <router-link class="link" to="/login">Já tem uma conta? Fazer login</router-link>
+
+    <button class="cadastrar">Cadastrar</button>
+  </div>
+</template>
+
+<style scoped>
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+  margin: 80px auto;
+  border-radius: 12px;
+  background: #F1F3F6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  gap: 10px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.logo {
+  width: 50%;
+  height: 50%;
+}
+
+.gorecipe {
+  width: 50%;
+  height: 50%;
+  margin-top: -25%;
+}
+
+.email, .senha, .re-senha {
+  width: 85%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  padding: 8px;
+}
+
+.cadastrar {
+  background-color: #0B174C;
+  border: 1px solid #0B174C;
+  color: white;
+  padding: 10px;
+  padding-inline: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  
+}
+
+.entrar:hover {
+  background-color: #142f5b;
+  font-size: 15px;
+}
+
+.login h1 {
+  margin: 5px 0;
+  color: #0B174C;
+  margin-top: -20%
+}
+
+.link {
+  font-size: 16px;
+  color: #0B174C;
+  text-decoration: none;
+  margin-top: 4px;
+}
+</style>
