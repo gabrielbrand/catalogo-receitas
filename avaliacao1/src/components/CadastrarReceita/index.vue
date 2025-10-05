@@ -5,10 +5,10 @@
         <v-container>
           <v-row align="center" justify="center" class="py-16">
             <v-col cols="12" md="8" class="text-center">
-              <h1 class="text-h3 text-md-h2 font-weight-bold mb-4 text-white">
+              <h1 class="text-h3 text-md-h2 font-weight-bold mb-4">
                 Cadastrar Nova Receita
               </h1>
-              <p class="text-h6 text-white">
+              <p class="subtitle-header">
                 Compartilhe sua receita favorita com a comunidade
               </p>
             </v-col>
@@ -325,8 +325,14 @@ export default {
 
 <style scoped>
 .create-header {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  background-color: white;
   position: relative;
+  color: #0b174c;
+}
+
+.subtitle-header {
+  color: #0b174c;
+  font-size: 22px;
 }
 
 .create-header::before {

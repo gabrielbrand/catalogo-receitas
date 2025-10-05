@@ -13,7 +13,7 @@
       <router-link id="sobre" :to="{ name: 'sobre' }">Sobre</router-link>
     </h3>
     <h3>
-      <span v-if="appStore.isLogged">{{ appStore.getUser.name }} 
+      <span class="user-name" v-if="appStore.isLogged">{{ appStore.getUser.name }} 
         <v-btn class="sair-btn" @click="appStore.logout()">Sair</v-btn>
       </span>
       
@@ -71,6 +71,11 @@ header #home .gorecipe {
   font-weight: bold;
   border: 1px solid red;
   margin-left: 10px;
+}
+
+.user-name {
+  color: #0B174C;
+  font-weight: bold;
 }
 
 

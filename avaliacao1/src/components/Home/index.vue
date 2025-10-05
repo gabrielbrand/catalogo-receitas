@@ -16,7 +16,7 @@
                 <div class="d-flex flex-column flex-md-row gap-4 justify-center">
                   <v-btn
                     size="large"
-                    color="#ffffff"
+                    color="#f97800"
                     variant="flat"
                     class="px-8 py-3"
                     to="/catalogo_receitas"
@@ -26,7 +26,7 @@
                   </v-btn>
                   <v-btn
                     size="large"
-                    color="#ffffff"
+                    color="#0b174c"
                     variant="outlined"
                     class="px-8 py-3"
                     to="/sobre"
@@ -57,7 +57,7 @@
         <v-row>
           <v-col cols="12" md="4" class="mb-8">
             <v-card flat class="feature-card text-center pa-6 h-100">
-              <v-avatar size="80" color="#ef4545" class="mb-4">
+              <v-avatar size="80" color="#f97800" class="mb-4">
                 <v-icon size="40" color="white">mdi-book-open-variant</v-icon>
               </v-avatar>
               <h3 class="text-h5 font-weight-bold mb-4">Receitas Diversas</h3>
@@ -68,7 +68,7 @@
           </v-col>
           <v-col cols="12" md="4" class="mb-8">
             <v-card flat class="feature-card text-center pa-6 h-100">
-              <v-avatar size="80" color="#ef4545" class="mb-4">
+              <v-avatar size="80" color="#f97800" class="mb-4">
                 <v-icon size="40" color="white">mdi-clock-outline</v-icon>
               </v-avatar>
               <h3 class="text-h5 font-weight-bold mb-4">Fácil de Seguir</h3>
@@ -79,7 +79,7 @@
           </v-col>
           <v-col cols="12" md="4" class="mb-8">
             <v-card flat class="feature-card text-center pa-6 h-100">
-              <v-avatar size="80" color="#ef4545" class="mb-4">
+              <v-avatar size="80" color="#f97800" class="mb-4">
                 <v-icon size="40" color="white">mdi-heart</v-icon>
               </v-avatar>
               <h3 class="text-h5 font-weight-bold mb-4">Feito com Amor</h3>
@@ -129,8 +129,7 @@ export default {
 
 <style scoped>
 .hero-section {
-  background: linear-gradient(135deg, #ef4545 0%, #e47b1a 100%);
-  color: white;
+  color: #0b174c;
   position: relative;
   overflow: hidden;
 }
@@ -157,11 +156,11 @@ export default {
 
 .hero-subtitle {
   line-height: 1.6;
-  color: #fcfcfc !important;
+  color: #0b174c !important;
 }
 
 .hero-title .text-primary {
-  color: #ffffff !important;
+  color: #f97800 !important;
 }
 
 .features-section {
@@ -174,7 +173,7 @@ export default {
 }
 
 .cta-section {
-  background: linear-gradient(135deg, #ef4545 0%, #e47b1a 100%);
+  background: #0b174c;
   position: relative;
 }
 

@@ -6,14 +6,14 @@
         <v-container>
           <v-row align="center" justify="center" class="py-16">
             <v-col cols="12" md="8" class="text-center">
-              <h1 class="text-h3 text-md-h2 font-weight-bold mb-4 text-white">
+              <h1 class="text-h3 text-md-h2 font-weight-bold mb-4">
                 Catálogo de Receitas
               </h1>
-              <p class="text-h6 text-white mb-6">
+              <p class="text-h6 mb-6">
                 Descubra receitas deliciosas para todos os momentos
               </p>
               <v-btn
-                color="white"
+                color="#f97800"
                 variant="flat"
                 size="large"
                 @click="handleCreateRecipe"
@@ -160,8 +160,8 @@ export default {
 
 <style scoped>
 .catalog-header {
-  background: linear-gradient(135deg, #ef4545 0%, #e47b1a 100%);
   position: relative;
+  color: #0b174c;
 }
 
 .catalog-header::before {
@@ -197,10 +197,11 @@ export default {
 }
 
 .recipe-title {
-  font-size: 1.1rem !important;
+  color: #0b174c !important;
+  font-size: 1 !important;
   font-weight: 600 !important;
   line-height: 1.3;
-  padding-bottom: 8px !important;
+  padding: 20px !important;
 }
 
 .recipe-subtitle {
@@ -211,7 +212,7 @@ export default {
 }
 
 .recipe-description {
-  color: #555 !important;
+  color: #0b174c !important;
   font-size: 0.9rem;
   line-height: 1.4;
   padding-top: 0 !important;
