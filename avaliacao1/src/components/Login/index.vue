@@ -1,6 +1,5 @@
 <template>
   <div class="login">
-    <v-card v-if="!appStore.isLogged">
     <div class="logo-container">
       <img class="gorecipe" src="../../../public/2.png" alt="Logo"/>
     </div>
@@ -18,30 +17,34 @@
       {{ appStore.getError }}
     </div>
     
-    <v-card class="input-container">
+    <div class="input-container">
       <p>E-mail</p>
-      <v-text-field v-model="email" class="email" type="text" placeholder="Digite seu e-mail" />
+      <input 
+        v-model="email" 
+        class="email" 
+        type="email" 
+        placeholder="Digite seu e-mail" 
+      />
       <p>Senha</p>
-      <v-text-field v-model="password" class="senha" type="password" placeholder="Digite sua senha" />
-    </v-card>
-    <v-btn class="link" to="/cadastrar">Não tem uma conta? Cadastre-se</v-btn>
+      <input 
+        v-model="password" 
+        class="senha" 
+        type="password" 
+        placeholder="Digite sua senha" 
+      />
+    </div>
+    <router-link class="link" to="/cadastrar">Não tem uma conta? Cadastre-se</router-link>
 
-    <v-btn @click="handleLogin" class="entrar">Entrar</v-btn>
-    </v-card>
-    <v-card v-else>
-      <v-card-title>Bem-vindo de volta, {{ appStore.getUser.name }}</v-card-title>
-      <v-card-subtitle>{{ appStore.getUser.email }}</v-card-subtitle>
-      <v-card-actions>
-        <v-btn block color="red" size="large" variant="tonal" @click="appStore.logout()">Sair</v-btn>
-      </v-card-actions>
-    </v-card>
+    <button @click="handleLogin" class="entrar">Entrar</button>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import { useAppStore } from '@/stores/app.js';
 
+const router = useRouter();
 const appStore = useAppStore();
 const email = ref('');
 const password = ref('');
