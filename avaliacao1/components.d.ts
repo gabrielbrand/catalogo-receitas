@@ -10,6 +10,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./src/components/AppFooter.vue')['default']
     Cadastrar: typeof import('./src/components/Cadastrar/index.vue')['default']
+    CadastrarReceita: typeof import('./src/components/CadastrarReceita/index.vue')['default']
     CatalogoReceitas: typeof import('./src/components/CatalogoReceitas/index.vue')['default']
     Header: typeof import('./src/components/Header/index.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']

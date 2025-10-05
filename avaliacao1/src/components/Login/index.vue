@@ -7,6 +7,12 @@
 
     <h1>Login</h1>
     
+    <!-- Mensagem informativa -->
+    <div class="info-message">
+      <v-icon color="info" class="mr-2">mdi-information</v-icon>
+      Faça login para criar e compartilhar suas receitas
+    </div>
+    
     <!-- Mensagem de erro -->
     <div v-if="appStore.getError" class="error-message">
       {{ appStore.getError }}
@@ -44,7 +50,14 @@ const handleLogin = () => {
   appStore.clearError();
   const result = appStore.login(email.value, password.value);
   
-  if (!result.success) {
+  if (result.success) {
+    // Verificar se há um redirect pendente
+    const redirectTo = sessionStorage.getItem('redirectAfterLogin');
+    if (redirectTo) {
+      sessionStorage.removeItem('redirectAfterLogin');
+      window.location.href = redirectTo;
+    }
+  } else {
     console.error('Erro no login:', appStore.getError);
   }
 };
@@ -129,6 +142,20 @@ const handleLogin = () => {
   text-decoration: none;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.info-message {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: 1px solid #bbdefb;
+  width: 85%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .error-message {
