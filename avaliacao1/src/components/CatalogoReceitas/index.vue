@@ -56,7 +56,7 @@
                   <v-chip 
                     :color="receita.dificuldade === 'Fácil' ? 'green' : receita.dificuldade === 'Médio' ? 'orange' : 'red'"
                     size="small"
-                    class="ma-2"
+                    class="ma-2 bg-white font-weight-bold"
                   >
                     {{ receita.dificuldade }}
                   </v-chip>
@@ -81,10 +81,10 @@
               <v-card-actions class="pa-4">
                 <v-spacer></v-spacer>
                 <v-btn
-                  color="primary"
+                  color="#ef4545"
                   variant="flat"
                   :to="{ name: 'receita', params: { id: receita.id } }"
-                  class="recipe-btn"
+                  class="recipe-btn px-4"
                 >
                   <v-icon start>mdi-eye</v-icon>
                   Ver Receita
@@ -160,7 +160,7 @@ export default {
 
 <style scoped>
 .catalog-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ef4545 0%, #e47b1a 100%);
   position: relative;
 }
 
@@ -183,11 +183,6 @@ export default {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 16px !important;
   overflow: hidden;
-}
-
-.recipe-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .recipe-image {
@@ -234,11 +229,6 @@ export default {
   text-transform: none !important;
   font-weight: 500 !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-}
-
-.create-recipe-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
 }
 
 @media (max-width: 600px) {

@@ -1,6 +1,5 @@
 <template>
   <v-container fluid class="pa-0">
-    <!-- Loading State -->
     <v-row v-if="loading" no-gutters class="loading-section">
       <v-col cols="12" class="text-center py-16">
         <v-progress-circular
@@ -12,7 +11,6 @@
       </v-col>
     </v-row>
 
-    <!-- Recipe Not Found -->
     <v-row v-else-if="!receita" no-gutters class="error-section">
       <v-col cols="12" class="text-center py-16">
         <v-icon size="120" color="grey-lighten-1">mdi-food-off</v-icon>
@@ -32,9 +30,7 @@
       </v-col>
     </v-row>
 
-    <!-- Recipe Content -->
     <div v-else>
-      <!-- Hero Section -->
       <v-row no-gutters class="recipe-hero">
         <v-col cols="12">
           <v-container>
@@ -62,7 +58,7 @@
                   <v-chip
                     :color="receita.dificuldade === 'Fácil' ? 'green' : receita.dificuldade === 'Médio' ? 'orange' : 'red'"
                     size="large"
-                    class="px-4"
+                    class="px-4 bg-white font-weight-bold"
                   >
                     <v-icon start>mdi-flag</v-icon>
                     {{ receita.dificuldade }}
@@ -93,15 +89,13 @@
         </v-col>
       </v-row>
 
-      <!-- Recipe Content -->
       <v-row no-gutters class="recipe-content py-16">
         <v-container>
           <v-row>
-            <!-- Ingredients -->
             <v-col cols="12" md="4" class="mb-8">
               <v-card class="ingredients-card pa-6" elevation="2">
                 <h3 class="text-h5 font-weight-bold mb-4 d-flex align-center">
-                  <v-icon class="mr-2" color="primary">mdi-format-list-bulleted</v-icon>
+                  <v-icon class="mr-2" color="#0b174c">mdi-format-list-bulleted</v-icon>
                   Ingredientes
                 </h3>
                 <v-list>
@@ -111,7 +105,7 @@
                     class="px-0"
                   >
                     <template v-slot:prepend>
-                      <v-icon color="primary" size="small">mdi-check-circle</v-icon>
+                      <v-icon color="#0b174c" size="small">mdi-check-circle</v-icon>
                     </template>
                     <v-list-item-title>{{ ingrediente }}</v-list-item-title>
                   </v-list-item>
@@ -119,11 +113,10 @@
               </v-card>
             </v-col>
 
-            <!-- Instructions -->
             <v-col cols="12" md="8" class="mb-8">
               <v-card class="instructions-card pa-6" elevation="2">
                 <h3 class="text-h5 font-weight-bold mb-6 d-flex align-center">
-                  <v-icon class="mr-2" color="primary">mdi-book-open-variant</v-icon>
+                  <v-icon class="mr-2" color="#0b174c">mdi-book-open-variant</v-icon>
                   Modo de Preparo
                 </h3>
                 <div class="instructions-list">
@@ -134,7 +127,7 @@
                   >
                     <div class="d-flex align-start">
                       <v-avatar
-                        color="primary"
+                        color="#0b174c"
                         size="32"
                         class="mr-4 mt-1"
                       >
@@ -150,7 +143,6 @@
             </v-col>
           </v-row>
 
-          <!-- Tips Section -->
           <v-row v-if="receita.dicas" class="mt-8">
             <v-col cols="12">
               <v-card class="tips-card pa-6" elevation="2" color="orange-lighten-5">
@@ -182,18 +174,15 @@
   },
   methods: {
     loadRecipe() {
-      // Simular carregamento
       setTimeout(() => {
         const recipeId = parseInt(this.$route.params.id)
         this.receita = this.getRecipeById(recipeId)
         this.loading = false
-      }, 1000)
+      })
     },
     getRecipeById(id) {
-      // Carregar receitas cadastradas do localStorage
       const receitasCadastradas = JSON.parse(localStorage.getItem('receitasCadastradas') || '[]')
       
-      // Receitas padrão
       const receitasPadrao = [
         {
           id: 1,
@@ -263,7 +252,6 @@
         }
       ]
       
-      // Combinar receitas padrão com as cadastradas
       const todasReceitas = [...receitasPadrao, ...receitasCadastradas]
       
       return todasReceitas.find(recipe => recipe.id === id)
@@ -280,7 +268,7 @@
 }
 
 .recipe-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ef4545 0%, #e47b1a 100%);
   position: relative;
 }
 

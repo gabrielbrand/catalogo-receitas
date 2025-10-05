@@ -1,6 +1,5 @@
 <template>
   <v-container fluid class="pa-0">
-    <!-- Hero Section -->
     <v-row no-gutters class="hero-section">
       <v-col cols="12">
         <v-container>
@@ -17,7 +16,7 @@
                 <div class="d-flex flex-column flex-md-row gap-4 justify-center">
                   <v-btn
                     size="large"
-                    color="primary"
+                    color="#ffffff"
                     variant="flat"
                     class="px-8 py-3"
                     to="/catalogo_receitas"
@@ -27,7 +26,7 @@
                   </v-btn>
                   <v-btn
                     size="large"
-                    color="primary"
+                    color="#ffffff"
                     variant="outlined"
                     class="px-8 py-3"
                     to="/sobre"
@@ -43,7 +42,6 @@
       </v-col>
     </v-row>
 
-    <!-- Features Section -->
     <v-row no-gutters class="features-section py-16">
       <v-container>
         <v-row>
@@ -59,7 +57,7 @@
         <v-row>
           <v-col cols="12" md="4" class="mb-8">
             <v-card flat class="feature-card text-center pa-6 h-100">
-              <v-avatar size="80" color="primary" class="mb-4">
+              <v-avatar size="80" color="#ef4545" class="mb-4">
                 <v-icon size="40" color="white">mdi-book-open-variant</v-icon>
               </v-avatar>
               <h3 class="text-h5 font-weight-bold mb-4">Receitas Diversas</h3>
@@ -70,7 +68,7 @@
           </v-col>
           <v-col cols="12" md="4" class="mb-8">
             <v-card flat class="feature-card text-center pa-6 h-100">
-              <v-avatar size="80" color="primary" class="mb-4">
+              <v-avatar size="80" color="#ef4545" class="mb-4">
                 <v-icon size="40" color="white">mdi-clock-outline</v-icon>
               </v-avatar>
               <h3 class="text-h5 font-weight-bold mb-4">Fácil de Seguir</h3>
@@ -81,7 +79,7 @@
           </v-col>
           <v-col cols="12" md="4" class="mb-8">
             <v-card flat class="feature-card text-center pa-6 h-100">
-              <v-avatar size="80" color="primary" class="mb-4">
+              <v-avatar size="80" color="#ef4545" class="mb-4">
                 <v-icon size="40" color="white">mdi-heart</v-icon>
               </v-avatar>
               <h3 class="text-h5 font-weight-bold mb-4">Feito com Amor</h3>
@@ -94,7 +92,6 @@
       </v-container>
     </v-row>
 
-    <!-- CTA Section -->
     <v-row no-gutters class="cta-section">
       <v-col cols="12">
         <v-container>
@@ -132,7 +129,7 @@ export default {
 
 <style scoped>
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ef4545 0%, #e47b1a 100%);
   color: white;
   position: relative;
   overflow: hidden;
@@ -160,6 +157,11 @@ export default {
 
 .hero-subtitle {
   line-height: 1.6;
+  color: #fcfcfc !important;
+}
+
+.hero-title .text-primary {
+  color: #ffffff !important;
 }
 
 .features-section {
@@ -167,13 +169,8 @@ export default {
 }
 
 .feature-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 16px !important;
-}
-
-.feature-card:hover {
-  transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 16px !important;
 }
 
 .cta-section {

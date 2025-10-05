@@ -1,6 +1,5 @@
 <template>
   <v-container fluid class="pa-0">
-    <!-- Header Section -->
     <v-row no-gutters class="create-header">
       <v-col cols="12">
         <v-container>
@@ -18,7 +17,6 @@
       </v-col>
     </v-row>
 
-    <!-- Form Section -->
     <v-row no-gutters class="form-section py-16">
       <v-container>
         <v-row justify="center">
@@ -26,7 +24,6 @@
             <v-card class="form-card pa-8" elevation="4">
               <v-form ref="form" v-model="valid" @submit.prevent="submitForm">
                 <v-row>
-                  <!-- Recipe Title -->
                   <v-col cols="12" class="mb-4">
                     <v-text-field
                       v-model="formData.titulo"
@@ -39,7 +36,6 @@
                     ></v-text-field>
                   </v-col>
 
-                  <!-- Recipe Description -->
                   <v-col cols="12" class="mb-4">
                     <v-textarea
                       v-model="formData.descricao"
@@ -53,7 +49,6 @@
                     ></v-textarea>
                   </v-col>
 
-                  <!-- Recipe Image -->
                   <v-col cols="12" class="mb-4">
                     <v-text-field
                       v-model="formData.imagem"
@@ -66,7 +61,6 @@
                     ></v-text-field>
                   </v-col>
 
-                  <!-- Recipe Meta Info -->
                   <v-col cols="12" md="4" class="mb-4">
                     <v-select
                       v-model="formData.dificuldade"
@@ -103,7 +97,6 @@
                     ></v-text-field>
                   </v-col>
 
-                  <!-- Ingredients Section -->
                   <v-col cols="12" class="mb-4">
                     <h3 class="text-h6 font-weight-bold mb-4 d-flex align-center">
                       <v-icon class="mr-2" color="primary">mdi-format-list-bulleted</v-icon>
@@ -138,7 +131,6 @@
                     </v-btn>
                   </v-col>
 
-                  <!-- Instructions Section -->
                   <v-col cols="12" class="mb-4">
                     <h3 class="text-h6 font-weight-bold mb-4 d-flex align-center">
                       <v-icon class="mr-2" color="primary">mdi-book-open-variant</v-icon>
@@ -179,7 +171,6 @@
                     </v-btn>
                   </v-col>
 
-                  <!-- Tips Section -->
                   <v-col cols="12" class="mb-6">
                     <v-textarea
                       v-model="formData.dicas"
@@ -191,7 +182,6 @@
                     ></v-textarea>
                   </v-col>
 
-                  <!-- Action Buttons -->
                   <v-col cols="12" class="d-flex justify-space-between">
                     <v-btn
                       color="grey"
@@ -234,7 +224,6 @@ export default {
     return { appStore }
   },
   created() {
-    // Verificar se o usuário está logado
     if (!this.appStore.isLogged) {
       this.$router.push('/login')
     }
@@ -292,11 +281,9 @@ export default {
       this.loading = true
 
       try {
-        // Filtrar ingredientes e instruções vazios
         const ingredientes = this.formData.ingredientes.filter(item => item.trim() !== '')
         const instrucoes = this.formData.instrucoes.filter(item => item.trim() !== '')
 
-        // Validar se há pelo menos um ingrediente e uma instrução
         if (ingredientes.length === 0) {
           alert('Adicione pelo menos um ingrediente')
           this.loading = false
@@ -309,9 +296,8 @@ export default {
           return
         }
 
-        // Criar objeto da receita
         const novaReceita = {
-          id: Date.now(), // ID único baseado no timestamp
+          id: Date.now(),
           titulo: this.formData.titulo,
           descricao: this.formData.descricao,
           imagem: this.formData.imagem,
@@ -324,15 +310,12 @@ export default {
           dataCriacao: new Date().toISOString()
         }
 
-        // Salvar no localStorage
         const receitasSalvas = JSON.parse(localStorage.getItem('receitasCadastradas') || '[]')
         receitasSalvas.push(novaReceita)
         localStorage.setItem('receitasCadastradas', JSON.stringify(receitasSalvas))
 
-        // Mostrar sucesso
         alert('Receita cadastrada com sucesso!')
         
-        // Redirecionar para o catálogo
         this.$router.push('/catalogo_receitas')
 
       } catch (error) {
@@ -348,7 +331,7 @@ export default {
 
 <style scoped>
 .create-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
   position: relative;
 }
 
