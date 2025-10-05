@@ -14,6 +14,9 @@ O site possui as seguintes rotas:
 - /cadastrar-receita : pagina de cadastro da receita
 - /catalogo_receitas/:id : pagina da receita cadastrada
 
+Componentes:
+- Cadastrar, CadastrarReceita, CatalogoReceita, Header, Home, Login, Receita e Sobre.
+
 Colaboração no projeto:
 - Gabriel Fernando Brand - Matrícula: 2019274866
 - Lucas Pereira Ribeiro Correa - Matrícula: 2021023109
