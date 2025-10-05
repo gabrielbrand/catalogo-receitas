@@ -226,220 +226,40 @@
         },
         {
           id: 2,
-          titulo: 'Risotto de Cogumelos',
-          descricao: 'Cremoso risotto italiano com cogumelos frescos e queijo parmesão.',
-          tempo: '30 min',
-          porcoes: '4 pessoas',
+          titulo: 'Pizza de Strogonoff',
+          descricao: 'Pizza deliciosa com strogonoff de carne, cogumelos e molho cremoso.',
+          tempo: '50 min',
+          porcoes: '6 pessoas',
           dificuldade: 'Médio',
-          imagem: 'https://images.unsplash.com/photo-1476124369491-e7addf5db469?w=800&h=600&fit=crop',
+          imagem: 'https://www.paollarestaurante.com.br/uploads/images/2019/08/pizza-strogonoff-de-carne-1565146013.jpg',
           ingredientes: [
-            '1 1/2 xícaras de arroz arbóreo',
-            '300g de cogumelos variados',
+            '1 massa de pizza (pronta ou caseira)',
+            '500g de carne bovina em tiras',
+            '200g de cogumelos frescos',
             '1 cebola média picada',
             '2 dentes de alho picados',
-            '1/2 xícara de vinho branco seco',
-            '1 litro de caldo de legumes quente',
-            '1/2 xícara de queijo parmesão ralado',
-            '2 colheres de sopa de manteiga',
+            '1 lata de creme de leite',
+            '2 colheres de sopa de ketchup',
+            '1 colher de sopa de mostarda',
+            '200g de queijo mussarela ralado',
             'Sal e pimenta a gosto',
-            'Salsinha picada para decorar'
+            'Azeite para refogar',
+            'Orégano para polvilhar'
           ],
           instrucoes: [
-            'Aqueça o caldo de legumes e mantenha quente em fogo baixo.',
-            'Em uma panela grande, derreta a manteiga e refogue a cebola até ficar transparente.',
-            'Adicione o alho e os cogumelos, cozinhe até dourarem.',
-            'Adicione o arroz e mexa por 2 minutos até ficar translúcido.',
-            'Adicione o vinho e mexa até evaporar completamente.',
-            'Adicione o caldo quente, uma concha por vez, mexendo constantemente.',
-            'Continue cozinhando por 18-20 minutos até o arroz ficar cremoso.',
-            'Retire do fogo, adicione o parmesão e tempere com sal e pimenta.',
-            'Sirva imediatamente decorado com salsinha.'
+            'Pré-aqueça o forno a 200°C.',
+            'Em uma frigideira, refogue a carne com azeite até dourar.',
+            'Adicione a cebola e o alho, refogue até ficarem transparentes.',
+            'Adicione os cogumelos e cozinhe por 5 minutos.',
+            'Misture o ketchup, mostarda e tempere com sal e pimenta.',
+            'Adicione o creme de leite e cozinhe por mais 5 minutos.',
+            'Abra a massa de pizza em uma forma untada.',
+            'Espalhe o strogonoff sobre a massa.',
+            'Cubra com queijo mussarela e orégano.',
+            'Asse por 15-20 minutos até a borda dourar.',
+            'Retire do forno e sirva quente.'
           ],
-          dicas: 'Mexa constantemente o risotto para ativar o amido do arroz e criar a textura cremosa característica.'
-        },
-        {
-          id: 3,
-          titulo: 'Salada Caesar',
-          descricao: 'Salada clássica com alface, croutons, queijo parmesão e molho caesar.',
-          tempo: '15 min',
-          porcoes: '2 pessoas',
-          dificuldade: 'Fácil',
-          imagem: 'https://images.unsplash.com/photo-1546793665-c74683f339c1?w=800&h=600&fit=crop',
-          ingredientes: [
-            '1 cabeça de alface romana',
-            '1/2 xícara de croutons',
-            '1/4 xícara de queijo parmesão ralado',
-            '2 colheres de sopa de azeite extra virgem',
-            '1 colher de sopa de suco de limão',
-            '1 colher de chá de mostarda Dijon',
-            '1 dente de alho picado',
-            'Sal e pimenta a gosto',
-            'Anchovas (opcional)'
-          ],
-          instrucoes: [
-            'Lave e seque bem as folhas de alface, rasgue em pedaços médios.',
-            'Em uma tigela pequena, misture o azeite, limão, mostarda e alho.',
-            'Tempere o molho com sal e pimenta a gosto.',
-            'Em uma tigela grande, coloque a alface e regue com o molho.',
-            'Misture delicadamente para cobrir todas as folhas.',
-            'Adicione os croutons e o queijo parmesão.',
-            'Misture novamente e sirva imediatamente.'
-          ],
-          dicas: 'Para um sabor mais autêntico, prepare o molho com antecedência e deixe descansar por 30 minutos.'
-        },
-        {
-          id: 4,
-          titulo: 'Salmão Grelhado',
-          descricao: 'Salmão grelhado com ervas e limão, acompanhado de legumes assados.',
-          tempo: '25 min',
-          porcoes: '2 pessoas',
-          dificuldade: 'Médio',
-          imagem: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&h=600&fit=crop',
-          ingredientes: [
-            '2 filés de salmão (200g cada)',
-            '2 colheres de sopa de azeite',
-            '1 limão (suco e raspas)',
-            '2 colheres de sopa de ervas frescas (salsinha, endro)',
-            'Sal e pimenta a gosto',
-            'Legumes para acompanhar (brócolis, cenoura, batata)',
-            '2 colheres de sopa de manteiga'
-          ],
-          instrucoes: [
-            'Tempere os filés de salmão com sal, pimenta e suco de limão.',
-            'Deixe marinar por 15 minutos em temperatura ambiente.',
-            'Aqueça uma frigideira ou grelha em fogo médio-alto.',
-            'Adicione o azeite e grelhe o salmão por 4-5 minutos de cada lado.',
-            'Prepare os legumes cortados em pedaços pequenos.',
-            'Refogue os legumes na manteiga até ficarem macios.',
-            'Finalize o salmão com as ervas frescas e raspas de limão.',
-            'Sirva o salmão acompanhado dos legumes.'
-          ],
-          dicas: 'Para um salmão perfeito, não vire mais de uma vez e deixe descansar por 2 minutos antes de servir.'
-        },
-        {
-          id: 5,
-          titulo: 'Tiramisu',
-          descricao: 'Sobremesa italiana clássica com café, mascarpone e cacau em pó.',
-          tempo: '2 horas',
-          porcoes: '6 pessoas',
-          dificuldade: 'Difícil',
-          imagem: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&h=600&fit=crop',
-          ingredientes: [
-            '500g de queijo mascarpone',
-            '6 ovos (gemas e claras separadas)',
-            '1/2 xícara de açúcar',
-            '2 xícaras de café forte',
-            '2 colheres de sopa de licor de café (opcional)',
-            '1 pacote de biscoitos savoiardi',
-            'Cacau em pó para polvilhar',
-            'Chocolate amargo ralado para decorar'
-          ],
-          instrucoes: [
-            'Prepare o café forte e deixe esfriar. Adicione o licor se desejar.',
-            'Bata as gemas com metade do açúcar até ficar claro e cremoso.',
-            'Misture o mascarpone às gemas batidas.',
-            'Bata as claras em neve com o açúcar restante.',
-            'Dobre delicadamente as claras ao creme de mascarpone.',
-            'Molhe rapidamente os biscoitos no café.',
-            'Monte em camadas: biscoitos, creme, biscoitos, creme.',
-            'Leve à geladeira por pelo menos 4 horas.',
-            'Antes de servir, polvilhe com cacau e chocolate ralado.'
-          ],
-          dicas: 'Para um tiramisu perfeito, deixe descansar na geladeira por uma noite inteira antes de servir.'
-        },
-        {
-          id: 6,
-          titulo: 'Pasta Carbonara',
-          descricao: 'Massa italiana cremosa com bacon, ovos e queijo parmesão.',
-          tempo: '20 min',
-          porcoes: '4 pessoas',
-          dificuldade: 'Médio',
-          imagem: 'https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=800&h=600&fit=crop',
-          ingredientes: [
-            '400g de espaguete',
-            '200g de bacon em cubos',
-            '4 ovos grandes',
-            '1 xícara de queijo parmesão ralado',
-            '2 dentes de alho picados',
-            'Sal e pimenta preta a gosto',
-            'Azeite extra virgem',
-            'Salsinha picada para decorar'
-          ],
-          instrucoes: [
-            'Cozinhe o espaguete em água salgada até ficar al dente.',
-            'Reserve 1 xícara da água do cozimento.',
-            'Em uma frigideira, frite o bacon até ficar crocante.',
-            'Adicione o alho e frite por 1 minuto.',
-            'Bata os ovos com o parmesão em uma tigela.',
-            'Escorra a massa e misture com o bacon.',
-            'Retire do fogo e misture rapidamente com os ovos.',
-            'Adicione água do cozimento se necessário para cremosidade.',
-            'Tempere com sal e pimenta e sirva com salsinha.'
-          ],
-          dicas: 'O segredo é misturar os ovos fora do fogo para não cozinhar e criar grumos.'
-        },
-        {
-          id: 7,
-          titulo: 'Hambúrguer Artesanal',
-          descricao: 'Hambúrguer caseiro com carne moída, queijo cheddar e vegetais frescos.',
-          tempo: '30 min',
-          porcoes: '4 pessoas',
-          dificuldade: 'Fácil',
-          imagem: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=600&fit=crop',
-          ingredientes: [
-            '500g de carne moída (patinho)',
-            '4 pães de hambúrguer',
-            '4 fatias de queijo cheddar',
-            '1 cebola roxa fatiada',
-            '2 tomates fatiados',
-            'Alface americana',
-            '4 fatias de bacon',
-            'Maionese e ketchup',
-            'Sal e pimenta a gosto'
-          ],
-          instrucoes: [
-            'Tempere a carne moída com sal e pimenta.',
-            'Divida em 4 bolas e forme os hambúrgueres.',
-            'Grelhe os hambúrgueres por 4-5 minutos de cada lado.',
-            'Frite o bacon até ficar crocante.',
-            'Toaste os pães levemente.',
-            'Monte os hambúrgueres: pão, maionese, alface, hambúrguer, queijo, bacon, tomate, cebola, ketchup, pão.',
-            'Sirva imediatamente com batatas fritas.'
-          ],
-          dicas: 'Para hambúrgueres mais suculentos, faça um pequeno buraco no centro de cada um antes de grelhar.'
-        },
-        {
-          id: 8,
-          titulo: 'Sopa de Abóbora',
-          descricao: 'Sopa cremosa de abóbora com gengibre e noz-moscada.',
-          tempo: '40 min',
-          porcoes: '6 pessoas',
-          dificuldade: 'Fácil',
-          imagem: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&h=600&fit=crop',
-          ingredientes: [
-            '1 abóbora média cortada em cubos',
-            '1 cebola picada',
-            '2 dentes de alho picados',
-            '1 pedaço de gengibre ralado',
-            '1 litro de caldo de legumes',
-            '200ml de leite de coco',
-            '2 colheres de sopa de azeite',
-            'Noz-moscada a gosto',
-            'Sal e pimenta a gosto',
-            'Salsinha para decorar'
-          ],
-          instrucoes: [
-            'Em uma panela grande, aqueça o azeite e refogue a cebola.',
-            'Adicione o alho e gengibre, refogue por 2 minutos.',
-            'Adicione a abóbora e refogue por 5 minutos.',
-            'Adicione o caldo de legumes e deixe ferver.',
-            'Cozinhe por 20 minutos até a abóbora ficar macia.',
-            'Bata tudo no liquidificador até ficar cremoso.',
-            'Volte à panela e adicione o leite de coco.',
-            'Tempere com noz-moscada, sal e pimenta.',
-            'Sirva quente decorado com salsinha.'
-          ],
-          dicas: 'Para uma sopa ainda mais cremosa, passe por uma peneira fina após bater no liquidificador.'
+          dicas: 'Para uma pizza ainda mais saborosa, deixe o strogonoff descansar por 30 minutos antes de montar a pizza.'
         }
       ]
       

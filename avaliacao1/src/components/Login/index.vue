@@ -6,13 +6,8 @@
 
     <h1>Login</h1>
     
-    <!-- Mensagem informativa -->
-    <div class="info-message">
-      <v-icon color="info" class="mr-2">mdi-information</v-icon>
-      Faça login para criar e compartilhar suas receitas
-    </div>
     
-    <!-- Mensagem de erro -->
+    
     <div v-if="appStore.getError" class="error-message">
       {{ appStore.getError }}
     </div>
@@ -54,11 +49,12 @@ const handleLogin = () => {
   const result = appStore.login(email.value, password.value);
   
   if (result.success) {
-    // Verificar se há um redirect pendente
     const redirectTo = sessionStorage.getItem('redirectAfterLogin');
     if (redirectTo) {
       sessionStorage.removeItem('redirectAfterLogin');
-      window.location.href = redirectTo;
+      router.push(redirectTo);
+    } else {
+      router.push('/');
     }
   } else {
     console.error('Erro no login:', appStore.getError);

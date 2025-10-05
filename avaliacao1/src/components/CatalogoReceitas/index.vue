@@ -139,66 +139,12 @@ export default {
         },
         {
           id: 2,
-          titulo: 'Risotto de Cogumelos',
-          descricao: 'Cremoso risotto italiano com cogumelos frescos e queijo parmesão.',
-          tempo: '30 min',
-          porcoes: '4 pessoas',
-          dificuldade: 'Médio',
-          imagem: 'https://images.unsplash.com/photo-1476124369491-e7addf5db469?w=400&h=300&fit=crop'
-        },
-        {
-          id: 3,
-          titulo: 'Salada Caesar',
-          descricao: 'Salada clássica com alface, croutons, queijo parmesão e molho caesar.',
-          tempo: '15 min',
-          porcoes: '2 pessoas',
-          dificuldade: 'Fácil',
-          imagem: 'https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&h=300&fit=crop'
-        },
-        {
-          id: 4,
-          titulo: 'Salmão Grelhado',
-          descricao: 'Salmão grelhado com ervas e limão, acompanhado de legumes assados.',
-          tempo: '25 min',
-          porcoes: '2 pessoas',
-          dificuldade: 'Médio',
-          imagem: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop'
-        },
-        {
-          id: 5,
-          titulo: 'Tiramisu',
-          descricao: 'Sobremesa italiana clássica com café, mascarpone e cacau em pó.',
-          tempo: '2 horas',
+          titulo: 'Pizza de Strogonoff',
+          descricao: 'Pizza deliciosa com strogonoff de carne, cogumelos e molho cremoso.',
+          tempo: '50 min',
           porcoes: '6 pessoas',
-          dificuldade: 'Difícil',
-          imagem: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&h=300&fit=crop'
-        },
-        {
-          id: 6,
-          titulo: 'Pasta Carbonara',
-          descricao: 'Massa italiana cremosa com bacon, ovos e queijo parmesão.',
-          tempo: '20 min',
-          porcoes: '4 pessoas',
           dificuldade: 'Médio',
-          imagem: 'https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=400&h=300&fit=crop'
-        },
-        {
-          id: 7,
-          titulo: 'Hambúrguer Artesanal',
-          descricao: 'Hambúrguer caseiro com carne moída, queijo cheddar e vegetais frescos.',
-          tempo: '30 min',
-          porcoes: '4 pessoas',
-          dificuldade: 'Fácil',
-          imagem: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop'
-        },
-        {
-          id: 8,
-          titulo: 'Sopa de Abóbora',
-          descricao: 'Sopa cremosa de abóbora com gengibre e noz-moscada.',
-          tempo: '40 min',
-          porcoes: '6 pessoas',
-          dificuldade: 'Fácil',
-          imagem: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=300&fit=crop'
+          imagem: 'https://www.paollarestaurante.com.br/uploads/images/2019/08/pizza-strogonoff-de-carne-1565146013.jpg'
         }
       ]
 
